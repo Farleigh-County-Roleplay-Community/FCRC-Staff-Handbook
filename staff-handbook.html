@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farleigh County Staff Handbook</title>
+<style>
+  /* Base styles */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #e0e0e0;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+  }
+  header, footer {
+    grid-column: 1 / span 2;
+    text-align: center;
+    padding: 20px;
+  }
+  header img.logo { max-width: 80px; margin-bottom: 10px; }
+  footer img.banner { max-width: 100%; border-radius: 8px; margin-top: 10px; }
+
+  /* Sidebar */
+  aside {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    position: sticky;
+    top: 20px;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+  }
+  aside h2 { margin-bottom: 15px; }
+  aside ul { list-style: none; padding: 0; }
+  aside li {
+    margin-bottom: 10px;
+  }
+  aside li button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    background: #4cafef;
+    color: #fff;
+    cursor: pointer;
+    text-align: left;
+  }
+  aside li button:hover { background: #1c86ee; }
+
+  /* Main content */
+  main {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  h1, h2 { color: #fff; margin-top: 0; }
+  .section {
+    margin-bottom: 50px;
+  }
+  .copy-text {
+    background: #2a2a2a;
+    border-left: 4px solid #4cafef;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 6px;
+  }
+  .instructions {
+    background: #252525;
+    border-left: 4px solid #f39c12;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 6px;
+  }
+
+  /* Lists, tables, highlights */
+  ul, ol { padding-left: 20px; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background: #2a2a2a;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  table th, table td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    text-align: left;
+  }
+  table th { background: #3a3a3a; }
+
+  /* Scroll smooth */
+  html { scroll-behavior: smooth; }
+
+  /* Buttons */
+  button {
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+<header>
+  <img src="images/logo.png" alt="Farleigh County Logo" class="logo">
+  <h1>Farleigh County Staff Handbook</h1>
+</header>
+
+<aside>
+  <h2>Sections</h2>
+  <ul>
+    <li><button onclick="scrollToSection('policies')">Policies & Code of Conduct</button></li>
+    <li><button onclick="scrollToSection('ranks')">Ranks & Promotions</button></li>
+    <li><button onclick="scrollToSection('communication')">Communication Rules</button></li>
+    <li><button onclick="scrollToSection('procedures')">Emergency Procedures</button></li>
+    <li><button onclick="scrollToSection('training')">Training & Guidelines</button></li>
+    <li><button onclick="scrollToSection('faq')">FAQ</button></li>
+    <li><button onclick="scrollToSection('resources')">Resources</button></li>
+  </ul>
+</aside>
+
+<main>
+  <!-- Policies -->
+  <section class="section" id="policies">
+    <h2>Policies & Code of Conduct</h2>
+    <div class="copy-text">
+      <p>All staff must adhere to ER:LC roleplay rules, maintain professionalism, and respect other members.</p>
+      <ul>
+        <li>No FRP, GTA Driving, or offensive behavior.</li>
+        <li>Follow chain of command at all times.</li>
+        <li>Maintain confidentiality of internal information.</li>
+      </ul>
+    </div>
+    <div class="instructions">
+      <p><strong>Instructor:</strong> Explain policies clearly and give examples of violations and consequences.</p>
+    </div>
+  </section>
+
+  <!-- Ranks & Promotions -->
+  <section class="section" id="ranks">
+    <h2>Ranks & Promotions</h2>
+    <div class="copy-text">
+      <p>Staff ranks from lowest to highest: Recruit, Officer, Sergeant, Lieutenant, Captain, Director.</p>
+      <table>
+        <tr><th>Rank</th><th>Responsibilities</th></tr>
+        <tr><td>Recruit</td><td>Observe training and follow instructions</td></tr>
+        <tr><td>Officer</td><td>Patrols, minor admin tasks</td></tr>
+        <tr><td>Sergeant</td><td>Supervise junior staff</td></tr>
+        <tr><td>Lieutenant</td><td>Lead operations, assign tasks</td></tr>
+        <tr><td>Captain</td><td>Oversee departments</td></tr>
+        <tr><td>Director</td><td>Manage entire server operations</td></tr>
+      </table>
+    </div>
+    <div class="instructions">
+      <p><strong>Instructor:</strong> Explain promotion criteria and responsibilities for each rank.</p>
+    </div>
+  </section>
+
+  <!-- Communication Rules -->
+  <section class="section" id="communication">
+    <h2>Communication Rules</h2>
+    <div class="copy-text">
+      <ul>
+        <li>Use clear, professional language.</li>
+        <li>Always announce priorities and updates.</li>
+        <li>Private messages must remain confidential.</li>
+        <li>Report issues through proper channels.</li>
+      </ul>
+    </div>
+    <div class="instructions">
+      <p><strong>Instructor:</strong> Demonstrate correct use of communication commands.</p>
+    </div>
+  </section>
+
+  <!-- Emergency Procedures -->
+  <section class="section" id="procedures">
+    <h2>Emergency Procedures</h2>
+    <div class="copy-text">
+      <ul>
+        <li>Medical emergencies: call EMS and notify supervisors immediately.</li>
+        <li>Server outages: follow IT escalation procedures.</li>
+        <li>Conflict resolution: separate involved parties, report to Director.</li>
+      </ul>
+    </div>
+    <div class="instructions">
+      <p><strong>Instructor:</strong> Review each procedure and perform short drills if needed.</p>
+    </div>
+  </section>
+
+  <!-- Training & Guidelines -->
+  <section class="section" id="training">
+    <h2>Training & Guidelines</h2>
+    <div class="copy-text">
+      <p>Training includes theoretical knowledge and practical exercises. Guidelines include:</p>
+      <ul>
+        <li>Patrol routes and responsibilities</li>
+        <li>Driving tests</li>
+        <li>Command practice</li>
+        <li>Scenario handling</li>
+      </ul>
+    </div>
+    <div class="instructions">
+      <p><strong>Instructor:</strong> Follow step-by-step training procedures and record results.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <h2>FAQ</h2>
+    <div class="copy-text">
+      <ul>
+        <li><strong>Q:</strong> What if a trainee fails a test? <strong>A:</strong> They must redo after review.</li>
+        <li><strong>Q:</strong> How to report misconduct? <strong>A:</strong> Use internal reporting forms.</li>
+        <li><strong>Q:</strong> Maximum trainees per session? <strong>A:</strong> 10 trainees.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section class="section" id="resources">
+    <h2>Resources</h2>
+    <div class="copy-text">
+      <ul>
+        <li>Official ER:LC rules and handbook</li>
+        <li>Internal training documents</li>
+        <li>Staff communication templates</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Farleigh County Roleplay</p>
+  <img src="images/guidebanner.png" alt="Guide Banner" class="banner">
+</footer>
+
+<script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  }
+</script>
+</body>
+</html>
